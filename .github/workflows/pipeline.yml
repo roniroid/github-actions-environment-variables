@@ -27,4 +27,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Print ENV_TEST
-      run: echo "env:ENV_TEST >> $ENV_TEST"
+      run: echo "env:ENV_TEST >> $ENV_TEST. Build >> $BUILD. Using Java Version $JAVA_VERSION"
+      env: 
+        BUILD: 'Running the Build job'
